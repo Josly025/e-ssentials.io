@@ -1,0 +1,24 @@
+{
+  "name": "e-ssentials.io",
+  "version": "1.0.0",
+  "description": "- Full functioning authentication for online shopping with that vanilla JS and SASSSY style",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josly025/e-ssentials.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Josly025/e-ssentials.io/issues"
+  },
+  "homepage": "https://github.com/Josly025/e-ssentials.io#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
