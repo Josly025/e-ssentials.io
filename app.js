@@ -1,7 +1,6 @@
 const express = require("express");
 const PORT = process.env.PORT || 8080;
 const expressLayouts = require("express-ejs-layouts");
-const passport = require("passport");
 
 const app = express();
 
