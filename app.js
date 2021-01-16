@@ -1,34 +1,19 @@
 const express = require("express");
-//library for parsing through the form
-const bodyParser = require("body-parser");
+const PORT = process.env.PORT || 8080;
+const expressLayouts = require("express-ejs-layouts");
+const passport = require("passport");
 
 const app = express();
 
-//middleware
-app.use(bodyParser.urlencoded({ extended: true }));
+//ejs middlewearLayouts
+app.use(expressLayouts);
+app.set("view engine", "ejs");
 
-// Root route - GET http request
-app.get("/", (req, res) => {
-  res.send(
-    `<div> 
-      <form method="POST">
-      <input name="email" placeholder="email"/>
-      <input name="password" placeholder="password"/>
-      <input name="passwordConfirmation" placeholder="password confirmation"/>
-      <button>Sign Up</button>
-      </form>
-      </div>`
-  );
-});
-
-//watch for / and method post
-// get access to email, pass, and confirmation
-app.post("/", (req, res) => {
-  console.log(req.body);
-  res.send("Account created!");
-});
+//ROUTES!!! - index vs. users file
+app.use("/", require("./routes/index"));
+app.use("/users", require("./routes/users"));
 
 //Start listening at localhost:3000
-app.listen(3000, () => {
-  console.log("Listing on port 3000!");
+app.listen(PORT, () => {
+  console.log(`Listening on PORT ${PORT}!!!`);
 });
