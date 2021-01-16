@@ -3,24 +3,30 @@
     <div class="card border-info mb-3" style="max-width: 20rem">
       <div class="card-header text-center text-info"><h3>Login</h3></div>
       <div class="card-body">
-        <div class="form-group">
-          <label class="col-form-label" for="inputDefault">Email</label>
+         <form action="/users/login" method="POST">
+          <div class="form-group">
+          <label class="col-form-label" for="email">Email</label>
           <input
-            type="text"
+            type="email"
+            id="email"
+            name="email"
             class="form-control"
             placeholder="Enter Email"
-            id="inputDefault"
+            
           />
           <label class="col-form-label" for="inputDefault">Password</label>
           <input
-            type="text"
+            type="password"
+            id="password"
+            name="password"
             class="form-control"
             placeholder="Enter Password"
-            id="inputDefault"
+            
           />
-          <button type="button" class="btn btn-outline-info btn-block mt-3">
+          <button type="submit" class="btn btn-outline-info btn-block mt-3">
             Login
           </button>
+        </form>
           <p class="text-info m-3">
             Don't have an account?<a
               href="/users/signup"

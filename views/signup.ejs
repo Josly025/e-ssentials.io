@@ -3,40 +3,51 @@
     <div class="card border-info mb-3" style="max-width: 20rem">
       <div class="card-header text-center text-info"><h3>Sign Up</h3></div>
       <div class="card-body">
-        <div class="form-group">
-          <label class="col-form-label" for="inputDefault">Name</label>
+        <!--Insert Ejs for partials here-->
+        <%- include ("./partials/messages"); %>
+        <form action="/users/signup" method="POST">
+          <div class="form-group">
+          <label class="col-form-label" for="name">Name</label>
           <input
-            type="text"
+            type="name" 
+            id="name"
+            name="name"
             class="form-control"
             placeholder="Enter Name"
-            id="inputDefault"
+            value="<%= typeof name != 'undefined' ? name : '' %>"
           />
           <label class="col-form-label" for="inputDefault">Email</label>
           <input
-            type="text"
+            type="email" 
+            id="email"
+            name="email"
             class="form-control"
             placeholder="Enter Email"
-            id="inputDefault"
+             value="<%= typeof email != 'undefined' ? email : '' %>"
           />
           <label class="col-form-label" for="inputDefault">Password</label>
           <input
-            type="text"
+            type="password" 
+            id="password"
+            name="password"
             class="form-control"
             placeholder="Create Password"
-            id="inputDefault"
+             value="<%= typeof password != 'undefined' ? password : '' %>"
           />
           <label class="col-form-label" for="inputDefault"
-            >Confirm Password</label
-          >
+            >Confirm Password</label>
           <input
-            type="text"
+            type="password" 
+            id="password2"
+            name="password2"
             class="form-control"
             placeholder="Confirm Password"
-            id="inputDefault"
+                   value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
           />
-          <button type="button" class="btn btn-outline-info btn-block mt-3">
+          <button type="submit" class="btn btn-outline-info btn-block mt-3">
             Sign Up
           </button>
+        </form>
           <p class="text-info m-3">
             Already have an account?<a
               href="/users/login"
