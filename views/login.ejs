@@ -3,6 +3,8 @@
     <div class="card border-info mb-3" style="max-width: 20rem">
       <div class="card-header text-center text-info"><h3>Login</h3></div>
       <div class="card-body">
+         
+        <%- include ("./partials/messages"); %>
          <form action="/users/login" method="POST">
           <div class="form-group">
           <label class="col-form-label" for="email">Email</label>
@@ -12,7 +14,6 @@
             name="email"
             class="form-control"
             placeholder="Enter Email"
-            
           />
           <label class="col-form-label" for="inputDefault">Password</label>
           <input
@@ -21,7 +22,6 @@
             name="password"
             class="form-control"
             placeholder="Enter Password"
-            
           />
           <button type="submit" class="btn btn-outline-info btn-block mt-3">
             Login

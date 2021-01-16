@@ -2,7 +2,12 @@ const express = require("express");
 const PORT = process.env.PORT || 8080;
 const expressLayouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
+const passport = require("passport");
+//using flash method because we are redirecting and want to store it in the session
 const flash = require("connect-flash");
+const session = require("express-session");
+
+require("./config/passport")(passport);
 
 const app = express();
 
@@ -21,6 +26,30 @@ app.set("view engine", "ejs");
 
 //Bodypraser from forms
 app.use(express.urlencoded({ extended: false }));
+
+/// Express session middleware
+//took out cookie
+app.use(
+  session({
+    secret: "secret coding",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
+
+// Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
+//variables
+//custom middleware
+app.use((req, res, next) => {
+  res.locals.success_msg = req.flash("success_msg");
+  res.locals.error_msg = req.flash("success_msg");
+  res.locals.error = req.flash("error");
+  next();
+});
 
 //ROUTES!!! - index vs. users file
 app.use("/", require("./routes/index.js"));
