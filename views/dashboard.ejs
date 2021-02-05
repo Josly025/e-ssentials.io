@@ -1,29 +1,116 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand text-info" href="#"
-    >E-ssentials <i class="fas fa-shopping-cart fa-1x text-info"></i
-  ></a>
+<!-- <h5 class="text-info">Welcome <%= name %></h5>
+<a href="/users/logout" class="nav-link">Logout<span uk-icon="heart"></span></a> -->
+<div class="body__main">
+  <header class="header">
+      <div
+        class="uk-child-width-expand@s uk-text-center uk-box-shadow-xlarge uk-box-shadow-hover-medium"
+        uk-grid
+      >
+        <div>
+         
+          <div class="uk-card uk-card-secondary uk-card-body uk-padding-large">
+            <h1><span class="uk-text-background title">Modish Music </span></h1>
+          </div>
+           <div class="glass">
+             <h1 class="text-secondary welcome__text">Welcome, <%= name %></h5>
+          </div>
+        </div>
+        <div>
+          <div
+            class="uk-card uk-card-secondary uk-card-body uk-box-shadow-xlarge uk-box-shadow-hover-medium"
+          >
+            <form class="uk-padding-medium">
+              <input
+                id="search"
+                class="uk-input uk-text-center"
+                type="text"
+                placeholder="Search Here..."
+              />
+              <button
+                id="search-btn"
+                type="submit"
+                class="uk-button uk-button-secondary search-btn"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+        <div>
+          
+          <div
+            class="uk-card uk-card-secondary uk-card-body uk-padding-large uk-box-shadow-xlarge uk-box-shadow-hover-medium"
+          >
+            <h1><span class="uk-text-background sub_title">Search an Artist and Discover New Tracks
+        </div>
+        <div class="glass">
+              <h1 class="logout__text">Logout<a href="/users/logout" ><i class="fas fa-sign-out-alt logout__icon"></i></a></h1>
+          </div>
+      </div>
+    </header>
+  </br>
 
-  <div class="collapse navbar-collapse" id="navbarColor01">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#"
-          >Home
-          <span class="sr-only">(current)</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
-      </li>
-      <li class="nav-item">
-        <a href="/users/logout" class="nav-link">Logout</a>
-      </li>
-    </ul>
-    <h5 class="text-info">Welcome <%= name %></h5>
-  </div>
-</nav>
+    <!--audio-->
+     <!-- <div id="play" class="custom"> -->
+    <div id="audioGrid" class="uk-grid-collapse uk-child-width-expand@s uk-text-center" uk-grid>
+     <div class="uk-background-secondary uk-light">
+          <!--Card-->
+          <div class="uk-resize-vertical uk-card uk-card-secondary uk-card-body ">
+            <!-- audio-->
+            <audio id="audio">
+              <source id="audioSource" src="#" type="audio/ogg" />
+            </audio>
+            <!--render here-->
+                  <div class="play"></div>
+                    <div class="base-timer">
+                      <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <g class="base-timer__circle">
+                          <circle class="base-timer__path-elapsed" cx="50" cy="50" r="192"></circle>
+                          <path id="base-timer-path-remaining" stroke-dasharray="283" class="base-timer__path-remaining arc" d="
+                                  M 50, 50
+                                  m -45, 0
+                                  a 45,45 0 1,0 90,0
+                                  a 45,45 0 1,0 -90,0
+                                  "></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+              <!--Control btns-->
+              <i id="backwardBtn" class="fas fa-backward btn secondary"></i>
+            
+              <i id="start" class="fas fa-play btn"></i>
+              <i id="pause" class="fas fa-pause btn"></i>
+             
+              <i id="forwardBtn" class="fas fa-forward btn secondary"></i>
+               <input id="vol-control" type="range" min="0" max="100" step="2" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+            </div>
+            <!--audio control-->
+          <input  id="duration" value="00.30" />
+        </div>
+      </div>
+    
+
+    <!--Music Table-->
+    <table class="uk-table uk-table-middle uk-table-divider uk-overflow-auto">
+    <thead>
+        <tr class="uk-card-secondary ">
+            <th class="uk-width-small uk-text-center uk-text-primary">Artist</th>
+           
+            <th class="uk-text-center uk-text-primary" >Song</th>
+          
+            <th class="uk-text-center uk-text-primary " >Album Cover</th>
+            
+            <th class="uk-text-center uk-text-primary">Link</th>
+        </tr>
+    </thead>
+    <tbody class="table uk-text-primary uk-card-secondary uk-text-center">
+       
+        
+    </tbody>
+</table>
+
+<!--Footer-->
+<div id="footer" class="uk-margin uk-card uk-card-secondary uk-text-center uk-text-primary uk-card-body">Modish Music &copy;</div>
+
+</div>
