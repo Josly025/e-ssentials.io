@@ -1,19 +1,18 @@
 const express = require("express");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8080;
 const expressLayouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 const passport = require("passport");
 //using flash method because we are redirecting and want to store it in the session
 const flash = require("connect-flash");
 const session = require("express-session");
-const serverless = require("serverless-http");
+
 require("./config/passport")(passport);
 
 const app = express();
 
 //Connect to DB
 const db = require("./config/keys").MongoURI;
-const router = require("./routes");
 
 //Connect to Mongo with mongoose
 mongoose
