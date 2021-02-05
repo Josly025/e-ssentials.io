@@ -13,6 +13,7 @@ const app = express();
 
 //Connect to DB
 const db = require("./config/keys").MongoURI;
+const router = require("./routes");
 
 //Connect to Mongo with mongoose
 mongoose
@@ -57,8 +58,6 @@ app.use((req, res, next) => {
 app.use("/", require("./routes/index.js"));
 app.use("/users", require("./routes/users.js"));
 
-///netlify
-module.exports.handler = serverless(app);
 //Start listening at localhost:3000
 app.listen(PORT, () => {
   console.log(`Listening on PORT ${PORT}!!!`);
