@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "build": "netlify-lambda build express"
   },
   "repository": {
     "type": "git",
@@ -27,8 +28,10 @@
     "express-ejs-layouts": "^2.5.0",
     "express-session": "^1.17.1",
     "mongoose": "^5.11.11",
+    "netlify-lambda": "^2.0.3",
     "nodemon": "^2.0.7",
     "passport": "^0.4.1",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "serverless-http": "^2.7.0"
   }
 }

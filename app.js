@@ -6,7 +6,7 @@ const passport = require("passport");
 //using flash method because we are redirecting and want to store it in the session
 const flash = require("connect-flash");
 const session = require("express-session");
-
+const serverless = require("serverless-http");
 require("./config/passport")(passport);
 
 const app = express();
@@ -57,6 +57,8 @@ app.use((req, res, next) => {
 app.use("/", require("./routes/index.js"));
 app.use("/users", require("./routes/users.js"));
 
+///netlify
+module.exports.handler = serverless(app);
 //Start listening at localhost:3000
 app.listen(PORT, () => {
   console.log(`Listening on PORT ${PORT}!!!`);
