@@ -1,5 +1,5 @@
 const express = require("express");
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3001;
 const expressLayouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 const passport = require("passport");
