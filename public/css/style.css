@@ -167,6 +167,9 @@ input {
   font-size: 1rem;
   font-weight: 200;
 }
+.text__transition--anchor {
+  margin-left: 0.2rem;
+}
 .search-btn {
   transition: all 0.2s;
   cursor: pointer;
@@ -300,9 +303,10 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   text-align: center;
   font-size: 2rem;
   margin-top: 1rem;
-  color: #222222;
-  font-weight: 300;
+  -webkit-text-stroke: 0.2px #f8f8f8;
+  text-shadow: 0px 2px 4px #1e87f0;
   text-transform: uppercase;
+  font-weight: 400;
   padding: 1rem;
   letter-spacing: 0.2rem;
 }
@@ -311,8 +315,9 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   text-align: center;
   font-size: 1.75rem;
   margin-top: 1rem;
-  color: #222222;
-  font-weight: 300;
+  -webkit-text-stroke: 0.2px #f8f8f8;
+  text-shadow: 0px 2px 4px #1e87f0;
+  font-weight: 400;
   text-transform: uppercase;
   padding: 0.5rem 3rem;
   letter-spacing: 0.2rem;
@@ -351,6 +356,105 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   border: solid 1px transparent;
   background-clip: padding-box;
 }
+
+/* welcome audio bars */
+/* Special Thanks for the animation boiler plate: https://codepen.io/ganapativs/pen/emzbzj */
+#bars {
+  height: 60px;
+  left: 20%;
+  margin: -0.25rem 0rem 0 0rem;
+  position: absolute;
+  top: 50%;
+  width: 10px;
+}
+
+.bar {
+  background: #1e87f0;
+  bottom: 11rem;
+  height: 10px;
+  position: absolute;
+  width: 9px;
+  animation: sound 5s -20s linear infinite alternate;
+  animation-delay: 2s;
+  margin: 2rem 0 0 6.2rem;
+}
+
+@keyframes sound {
+  0% {
+    opacity: 0.35;
+    height: 10px;
+    background-color: black;
+  }
+  100% {
+    opacity: 1;
+    height: 70px;
+  }
+}
+.bar:nth-child(13) {
+  left: -50px;
+  animation-duration: 487ms;
+}
+.bar:nth-child(14) {
+  left: -40px;
+  animation-duration: 442ms;
+}
+.bar:nth-child(13) {
+  left: -30px;
+  animation-duration: 480ms;
+}
+.bar:nth-child(14) {
+  left: -20px;
+  animation-duration: 442ms;
+}
+.bar:nth-child(1) {
+  left: -10px;
+  animation-duration: 474ms;
+}
+.bar:nth-child(2) {
+  left: 10px;
+  animation-duration: 433ms;
+}
+.bar:nth-child(3) {
+  left: 20px;
+  animation-duration: 407ms;
+}
+.bar:nth-child(4) {
+  left: 30px;
+  animation-duration: 458ms;
+}
+.bar:nth-child(5) {
+  left: 40px;
+  animation-duration: 400ms;
+}
+.bar:nth-child(6) {
+  left: 50px;
+  animation-duration: 427ms;
+}
+.bar:nth-child(7) {
+  left: 60px;
+  animation-duration: 441ms;
+}
+.bar:nth-child(8) {
+  left: 70px;
+  animation-duration: 419ms;
+}
+.bar:nth-child(9) {
+  left: 80px;
+  animation-duration: 487ms;
+}
+.bar:nth-child(10) {
+  left: 90px;
+  animation-duration: 442ms;
+}
+.bar:nth-child(11) {
+  left: 100px;
+  animation-duration: 441ms;
+}
+.bar:nth-child(12) {
+  left: 110px;
+  animation-duration: 440ms;
+}
+
 /********mobile responsiveness **/
 @media only screen and (max-width: 1300px) {
   .base-timer {
@@ -359,6 +463,19 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     bottom: 26rem;
     left: 30%;
     position: relative;
+  }
+  .glass_welcome {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  #bars {
+    left: 15%;
+    margin: -0.25rem 0rem 0 0rem;
+    position: absolute;
+    top: 45%;
   }
 }
 
@@ -386,9 +503,12 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   .custom {
     margin-top: -25rem;
   }
+  .glass {
+    margin-left: -2rem;
+  }
 }
 
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 960px) {
   .base-timer {
     height: 0rem;
     width: 28rem;
@@ -400,6 +520,17 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     margin-top: -25rem;
   }
 }
+
+@media only screen and (max-width: 940px) {
+  #bars {
+    height: 60px;
+    left: 36%;
+    margin: -0.25rem 0rem 0 0rem;
+    position: absolute;
+    top: 55%;
+    width: 10px;
+  }
+}
 @media only screen and (max-width: 775px) {
   .base-timer {
     height: 0rem;
@@ -408,9 +539,31 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     left: 15%;
     position: relative;
   }
+  #bars {
+    left: 32%;
+    margin: -0.25rem 0rem 0 0rem;
+  }
   #vol-control {
     margin: 1rem 40% 4rem 25%;
     width: 50%;
+  }
+  .glass__welcome {
+    margin-right: 25%;
+  }
+  #card__login {
+    margin-right: 20%;
+  }
+  #btn__login {
+    margin-left: 42%;
+  }
+  #card__signup {
+    margin-right: 20%;
+  }
+  #btn__signup {
+    margin-left: 42%;
+  }
+  .glass {
+    margin-left: -2rem;
   }
 }
 
@@ -448,101 +601,62 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
     margin: 5rem 40% 8rem 25%;
     width: 50%;
   }
-}
-
-/* welcome audio bars */
-#bars {
-  height: 60px;
-  left: 20%;
-  margin: -0.25rem 0rem 0 0rem;
-  position: absolute;
-  top: 50%;
-  width: 10px;
-}
-
-.bar {
-  background: #1e87f0;
-  bottom: 11rem;
-  height: 10px;
-  position: absolute;
-  width: 9px;
-  animation: sound 5s -20s linear infinite alternate;
-  animation-delay: 2s;
-  margin: 2rem 0 0 5.7rem;
-}
-
-@keyframes sound {
-  0% {
-    opacity: 0.35;
-    height: 10px;
-    background-color: black;
+  .glass__welcome {
+    margin-right: 45%;
   }
-  100% {
-    opacity: 1;
-    height: 70px;
+  #bars {
+    height: 60px;
+    left: 25%;
+    margin: -0.25rem 0rem 0 0rem;
+    position: absolute;
+    top: 50%;
+    width: 10px;
+  }
+  .text__title--anchor {
+    font-size: 2rem;
+  }
+  #card__login {
+    margin-right: 50%;
+  }
+  #btn__login {
+    margin-left: 38%;
+  }
+  #card__signup {
+    margin-right: 50%;
+  }
+  #btn__signup {
+    margin-left: 38%;
   }
 }
-.bar:nth-child(13) {
-  left: -35px;
-  animation-duration: 487ms;
-}
-.bar:nth-child(14) {
-  left: -25px;
-  animation-duration: 442ms;
-}
-.bar:nth-child(13) {
-  left: -15px;
-  animation-duration: 487ms;
-}
-.bar:nth-child(14) {
-  left: -5px;
-  animation-duration: 442ms;
-}
-.bar:nth-child(1) {
-  left: 5px;
-  animation-duration: 474ms;
-}
-.bar:nth-child(2) {
-  left: 15px;
-  animation-duration: 433ms;
-}
-.bar:nth-child(3) {
-  left: 25px;
-  animation-duration: 407ms;
-}
-.bar:nth-child(4) {
-  left: 35px;
-  animation-duration: 458ms;
-}
-.bar:nth-child(5) {
-  left: 45px;
-  animation-duration: 400ms;
-}
-.bar:nth-child(6) {
-  left: 55px;
-  animation-duration: 427ms;
-}
-.bar:nth-child(7) {
-  left: 65px;
-  animation-duration: 441ms;
-}
-.bar:nth-child(8) {
-  left: 75px;
-  animation-duration: 419ms;
-}
-.bar:nth-child(9) {
-  left: 85px;
-  animation-duration: 487ms;
-}
-.bar:nth-child(10) {
-  left: 95px;
-  animation-duration: 442ms;
-}
-.bar:nth-child(11) {
-  left: 105px;
-  animation-duration: 441ms;
-}
-.bar:nth-child(12) {
-  left: 115px;
-  animation-duration: 419ms;
+
+@media only screen and (max-width: 400px) {
+  .glass__welcome {
+    margin-right: 62%;
+  }
+  #bars {
+    height: 60px;
+    left: 15%;
+    margin: -0.25rem 0rem 0 0rem;
+    position: absolute;
+    top: 50%;
+    width: 10px;
+  }
+  .text__title--anchor {
+    font-size: 2rem;
+  }
+  #card__login {
+    margin-right: 65%;
+  }
+  #btn__login {
+    margin-left: 32%;
+  }
+  #card__signup {
+    margin-right: 65%;
+  }
+  #btn__signup {
+    margin-left: 32%;
+  }
+  .glass {
+    margin-left: 1rem;
+  }
 }

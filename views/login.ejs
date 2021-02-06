@@ -9,7 +9,7 @@
     class="body__login uk-child-width-1-3@m uk-grid-medium uk-grid-match uk-margin-large-top uk-flex uk-flex-center"
     uk-grid
   >
-    <div class="uk-card uk-card-secondary uk-card-body">
+    <div class="uk-card uk-card-secondary uk-card-body" id="card__login">
       <form action="/users/login" method="POST">
         <div class="uk-margin uk-text-center">
           <h3 class="uk-card-title text__title">Login</h3>
@@ -42,13 +42,21 @@
           </div>
         </div>
 
-        <button type="submit" class="uk-button uk-button-primary inital-btn">
+        <button
+          type="submit"
+          id="btn__login"
+          class="uk-button uk-button-primary inital-btn"
+        >
           Login
         </button>
       </form>
 
       <p class="uk-text-center text__transition">
-        Don't have an account?<a href="/users/signup">Sign Up</a>
+        Don't have an account?<a
+          class="text__transition--anchor"
+          href="/users/signup"
+          >Sign Up</a
+        >
       </p>
     </div>
   </div>
