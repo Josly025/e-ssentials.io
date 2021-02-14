@@ -17,11 +17,11 @@ const circle = document.querySelector("circle");
 const play = document.querySelector(".play");
 //number for index of data
 let number = 0;
-let artistOne = "Drake";
+let artistOne = "Coldplay";
 forwardBtn.addEventListener("click", function () {
   if (number >= 0 && number < 20) {
     number += 1;
-    if (artistOne === "Drake") {
+    if (artistOne === "Coldplay") {
       intialRender();
     } else {
       searchTrack();
@@ -34,7 +34,7 @@ forwardBtn.addEventListener("click", function () {
 backwardBtn.addEventListener("click", function () {
   if (number > 0 && number <= 20) {
     number -= 1;
-    if (artistOne === "Drake") {
+    if (artistOne === "Coldplay") {
       intialRender();
     } else {
       searchTrack();
