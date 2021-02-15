@@ -70,6 +70,6 @@ solve the responive problem with the SVG size.
 
 ## Project_Links \*\*\*
 
-[GitHub Repo](https://github.com/Josly025/e-essentials.io.git)
+[GitHub Repo](https://github.com/Josly025/e-ssentials.io.gitt)
 
 [Deployed Link](https://xenodochial-yonath-3705a1.netlify.app/)
