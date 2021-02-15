@@ -67,11 +67,10 @@ function intialRender() {
       let outputOne = ` <h1 class="tracks tracks-main">${tracksOne[number].title}</h1>
              <h2 class="tracks tracks-sub">${tracksOne[number].artist.name}</h2>
                 <div class="uk-inline-clip uk-transition-toggle uk-light" tabindex="0">
-             <img id="ablum-cover" class="uk-border-rounded uk-margin-large-top uk-margin-large-bottom" data-src="${tracksOne[number].album.cover_medium}" width="auto" height="100%"  uk-img>
-             
-                <div class="uk-position-center">
-                <div class="uk-transition-slide-top-small"><h4 class="uk-margin-remove">${tracksOne[number].album.title}</h4></div>
-                <div class="uk-transition-slide-bottom-small"><h4 class="uk-margin-remove">Album</h4></div>
+            <img class="uk-border-rounded uk-margin-large-top uk-margin-large-bottom thumb_image" data-src="${tracksOne[number].album.cover_medium}" width="auto" height="100%"  uk-img>
+             <div class="uk-position-center">
+                <div class="uk-transition-slide-top-small"><h4 class="uk-margin-remove uk-position-z-index">${tracksOne[number].album.title}</h4></div>
+                <div class="uk-transition-slide-bottom-small"><h4 class="uk-margin-remove uk-position-z-index">Album</h4></div>
             </div>
             </div>
              `;
@@ -120,9 +119,8 @@ function searchTrack(e) {
       let output = ` <h1 class="tracks tracks-main">${tracks[number].title}</h1>
              <h2 class="tracks tracks-sub">${tracks[number].artist.name}</h2>
                 <div class="uk-inline-clip uk-transition-toggle uk-light" tabindex="0">
-             <img id="album-cover" class="uk-border-rounded uk-margin-large-top uk-margin-large-bottom" data-src="${tracks[number].album.cover_medium}" width="auto" height="100%"  uk-img>
-             
-                <div class="uk-position-center">
+             <img  class="uk-border-rounded uk-margin-large-top uk-margin-large-bottom " data-src="${tracks[number].album.cover_medium}" width="auto" height="100%"  uk-img>
+                <div class="uk-position-center ">
                 <div class="uk-transition-slide-top-small"><h4 class="uk-margin-remove">${tracks[number].album.title}</h4></div>
                 <div class="uk-transition-slide-bottom-small"><h4 class="uk-margin-remove">Album</h4></div>
             </div>

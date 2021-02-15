@@ -75,7 +75,9 @@ input {
   margin-top: 1.75rem;
   margin-bottom: 4rem;
 }
-
+.uk-position-center {
+  z-index: 10;
+}
 .btn {
   transition: all 0.2s;
   font-size: 2.5rem;
