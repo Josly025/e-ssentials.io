@@ -1,8 +1,8 @@
 ### Title \*\*\*\*
 
-## Modish Music
+## Modist Music
 
-![Modish_Music](./images/modish.png)
+![Modish_Music](./public/images/welcome.png)
 
 ## Description \*\*\*
 

@@ -5,14 +5,14 @@
 
 body {
   font-size: 16px;
-  background-image: url("../images/marbel.png");
+  background-image: url("../images/marble_compress.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 2rem;
 }
 .body__inital {
-  background-image: url("../images/marbel.png");
+  background-image: url("../images/marble_compress.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
