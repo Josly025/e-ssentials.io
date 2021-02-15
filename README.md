@@ -40,13 +40,14 @@ solve the responive problem with the SVG size.
      two button between the arrows.
      Additionally, a user can search for their
      favorite tracks with the input area between the
-     headers.
+     headers. Additionally, a user can easily signup and login to the Modist dashboard using authetication.
 
 ## Credits
 
      - UI Kit
      - Deezer Audio API
      - Google Fonts
+     - NPM
 
 ## Contribution_Guidlines \*\*\*
 
@@ -69,6 +70,6 @@ solve the responive problem with the SVG size.
 
 ## Project_Links \*\*\*
 
-[GitHub Repo](https://github.com/Josly025/audio_player.io.git)
+[GitHub Repo](https://github.com/Josly025/e-essentials.io.git)
 
 [Deployed Link](https://xenodochial-yonath-3705a1.netlify.app/)
